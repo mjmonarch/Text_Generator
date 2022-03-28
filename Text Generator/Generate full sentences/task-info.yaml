@@ -23937,9 +23937,9 @@ files:
     class TextGeneratorTests(StageTest):
         def generate(self):
             return [
-                TestCase(stdin=PATH),
-                TestCase(stdin=PATH),
-                TestCase(stdin=PATH)
+                TestCase(stdin=PATH, time_limit=30000),
+                TestCase(stdin=PATH, time_limit=30000),
+                TestCase(stdin=PATH, time_limit=30000)
             ]
 
         def check(self, reply, attach):
@@ -23991,6 +23991,6 @@ files:
         TextGeneratorTests().run_tests()
 
   learner_created: false
-feedback_link: https://hyperskill.org/projects/134/stages/718/implement#comment
+feedback_link: https://hyperskill.org/learn/step/11143#comment
 status: Unchecked
 record: -1

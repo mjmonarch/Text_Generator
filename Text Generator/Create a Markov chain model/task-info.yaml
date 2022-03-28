@@ -23958,9 +23958,9 @@ files:
             test_input2 = PATH + "\n" + '\n'.join(sample(corpus, 3)) + "\nexit\n"
             test_input3 = PATH + "\n" + '\n'.join(sample(corpus, 3)) + "\nNotInCorpus\nexit\n"
             return [
-                TestCase(stdin=test_input1, attach=test_input1),
-                TestCase(stdin=test_input2, attach=test_input2),
-                TestCase(stdin=test_input3, attach=test_input3)
+                TestCase(stdin=test_input1, attach=test_input1, time_limit=30000),
+                TestCase(stdin=test_input2, attach=test_input2, time_limit=30000),
+                TestCase(stdin=test_input3, attach=test_input3, time_limit=30000)
             ]
 
         def check(self, reply, attach):
@@ -24012,6 +24012,6 @@ files:
     if __name__ == '__main__':
         TextGeneratorTests().run_tests()
   learner_created: false
-feedback_link: https://hyperskill.org/projects/134/stages/716/implement#comment
+feedback_link: https://hyperskill.org/learn/step/11141#comment
 status: Unchecked
 record: -1

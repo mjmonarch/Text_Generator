@@ -24044,7 +24044,7 @@ files:
 - name: text_generator/corpus.txt
   visible: true
   learner_created: true
-feedback_link: https://hyperskill.org/projects/134/stages/714/implement#comment
+feedback_link: https://hyperskill.org/learn/step/11139#comment
 status: Solved
 feedback:
   message: Congratulations!

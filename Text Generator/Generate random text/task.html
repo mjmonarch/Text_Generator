@@ -1,15 +1,15 @@
-<h5><strong style="background-color: transparent; color: #000000; font-size: 11pt; font-variant: normal;"></strong>Theory</h5>
+<h5 id="strong-stylebackground-color-transparent-color-000000-font-size-11pt-font-variant-normalstrongtheory"><strong style="background-color: transparent; color: #000000; font-size: 11pt; font-variant: normal;"></strong>Theory</h5>
 
 <p>We suggest using the method <a target="_blank" href="https://pynative.com/python-weighted-random-choices-with-probability/" rel="noopener noreferrer nofollow">random.choices()</a> to select the most probable tail from the list of possible tails based on the corresponding repetition counts. This method is similar to <code class="java">random.choice()</code> with the exception that it also considers user-specified weights during the process. The method takes four arguments: <code class="java">population</code>, <code class="java">weights</code>, <code class="java">cum_weights</code>, and <code class="java">k</code>. For this project, we only care about the first two arguments: <code class="java">population</code>, which is a list of elements to choose from, and <code class="java">weights</code>, which is a list of relative weights that correspond to the elements of the population. Since the other two arguments have sensible default values, we don't necessarily have to specify them. </p>
 
-<h5>Description</h5>
+<h5 id="description">Description</h5>
 
 <p>We have our model, fantastic! What's next? Well, the model can already be used to predict the next word in a chain by feeding it any head (of a bigram) from the corpus and retrieving the most probable tail from the corresponding entry. But how do we start the chain, what should be the first word?</p>
 
 <p>Of course, we could choose a word manually, but this is an error-prone solution because we might take a word that is not in the corpus. A better way to start is to choose a random word from the corpus and feed it to the model so that it predicts the next word. <br>
 After the next word is acquired, it should be used to predict the following word, and so on, thus continuing the chain.</p>
 
-<h5>Objectives</h5>
+<h5 id="objectives">Objectives</h5>
 
 <ol>
 	<li>Choose a random word from the corpus that will serve as the first word of the chain.</li>
@@ -23,7 +23,7 @@ After the next word is acquired, it should be used to predict the following word
 
 <p>You should only print the output of the current stage and not the previous one. The name of the file that contains the corpus should be given as a command line input.</p>
 
-<h5>Example</h5>
+<h5 id="example">Example</h5>
 
 <p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents user input.</p>
 

@@ -1,4 +1,4 @@
-<h5>Theory</h5>
+<h5 id="theory">Theory</h5>
 
 <p>To study how texts are structured, we usually have to take into consideration not just individual words but sequences of words and the relationships between them. These sequences might consist of any number of words, but usually, the number is limited to only two or three.</p>
 
@@ -6,11 +6,11 @@
 
 <p>When referring to bigrams in this project, we divide them into two parts: <strong>head</strong> and <strong>tail</strong>. In our case, the first token of the bigram is the head and the second token is the tail. For example, in the bigram <code class="java">good night</code>, <code class="java">good</code> is the head and <code class="java">night</code> is the tail.</p>
 
-<h5>Description</h5>
+<h5 id="description">Description</h5>
 
 <p>After the training data is acquired and preprocessed, it has to be transformed into a Markov chain model. The first step is to map the connections between tokens in the corpus. For this, we are going to use bigrams.</p>
 
-<h5>Objectives</h5>
+<h5 id="objectives">Objectives</h5>
 
 <ol>
 	<li>Transform the corpus into a collection of bigrams. The results should contain all the possible bigrams from the corpus, which means that:<br>
@@ -22,7 +22,7 @@
 
 <p>You should only print the output of the current stage and not the previous one, but like in the previous stage, the name of the file that contains the corpus should be given as user input.</p>
 
-<h5>Example</h5>
+<h5 id="example">Example</h5>
 
 <p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents user input.</p>
 

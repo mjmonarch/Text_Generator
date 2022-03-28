@@ -23949,9 +23949,9 @@ files:
                 [str(randint(0, 300000)) for _ in range(10)]) + "\nexit\n"
 
             return [
-                TestCase(stdin=test_input1, attach=test_input1),
-                TestCase(stdin=test_input2, attach=test_input2),
-                TestCase(stdin=test_input3, attach=test_input3)
+                TestCase(stdin=test_input1, attach=test_input1, time_limit=30000),
+                TestCase(stdin=test_input2, attach=test_input2, time_limit=30000),
+                TestCase(stdin=test_input3, attach=test_input3, time_limit=30000)
             ]
 
         def check(self, reply, attach):
@@ -24030,6 +24030,12 @@ files:
     if __name__ == '__main__':
         TextGeneratorTests().run_tests()
   learner_created: false
-feedback_link: https://hyperskill.org/projects/134/stages/715/implement#comment
-status: Unchecked
+- name: text_generator/corpus.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11140#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 28 Mar 2022 10:07:54 UTC
 record: -1
