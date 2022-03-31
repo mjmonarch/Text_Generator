@@ -5,3 +5,4 @@ content:
 - Shorthands
 - Regexp quantifiers
 - Tokenization
+- Defaultdict and Counter
