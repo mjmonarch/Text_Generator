@@ -54,10 +54,43 @@
 #         print("Value Error: Please input an integer.")
 #     user_input = input()
 
-#------------------------------------STAGE 3------------------------------------
+# ------------------------------------STAGE 3------------------------------------
+# from nltk.tokenize import WhitespaceTokenizer
+# from nltk import bigrams
+# from collections import Counter
+#
+# file_name = input()
+#
+# tk = WhitespaceTokenizer()
+# with open(file_name, 'r', encoding='utf-8') as reader:
+#     tokens = tk.tokenize(reader.read())
+# bigrams_list = list(bigrams(tokens))
+#
+# bigrams_list_dict = {}
+# for bigram in bigrams_list:
+#     bigrams_list_dict.setdefault(bigram[0], []).append((bigram[1]))
+#
+# for bigram_key in bigrams_list_dict.keys():
+#     bigrams_list_dict[bigram_key] = Counter(bigrams_list_dict[bigram_key])
+#
+# user_input = input()
+# while user_input != 'exit':
+#     print("Head:", user_input)
+#     try:
+#         for item in bigrams_list_dict[user_input].most_common():
+#             tail = "{0:<18}".format("Tail: " + item[0])
+#             count = "{0:<18}".format("Count: " + str(item[1]))
+#             print(tail, count)
+#     except KeyError:
+#         print("Key Error : The requested word is not in the model. Please input another word.")
+#     print("")
+#     user_input = input()
+
+#------------------------------------STAGE 4------------------------------------
 from nltk.tokenize import WhitespaceTokenizer
 from nltk import bigrams
 from collections import Counter
+import random
 
 file_name = input()
 
@@ -73,15 +106,14 @@ for bigram in bigrams_list:
 for bigram_key in bigrams_list_dict.keys():
     bigrams_list_dict[bigram_key] = Counter(bigrams_list_dict[bigram_key])
 
-user_input = input()
-while user_input != 'exit':
-    print("Head:", user_input)
-    try:
-        for item in bigrams_list_dict[user_input].most_common():
-            tail = "{0:<18}".format("Tail: " + item[0])
-            count = "{0:<18}".format("Count: " + str(item[1]))
-            print(tail, count)
-    except KeyError:
-        print("Key Error : The requested word is not in the model. Please input another word.")
-    print("")
-    user_input = input()
+for _i in range(10):
+    output = ""
+    start_word = random.choice(list(bigrams_list_dict.keys()))
+    output += start_word
+    for _j in range(9):
+        words = [x[0] for x in bigrams_list_dict[start_word].most_common()]
+        frequency = [x[1] for x in bigrams_list_dict[start_word].most_common()]
+        next_word = random.choices(words, frequency)[0]
+        output = output + " " + next_word
+        start_word = next_word
+    print(output)
