@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/422484/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 31 Mar 2022 13:58:32 UTC
+update_date: Fri, 01 Apr 2022 09:19:52 UTC
 stages:
 - id: 714
   step: 11139
@@ -19,10 +19,10 @@ stages:
   is_completed: true
 - id: 718
   step: 11143
-  is_completed: false
+  is_completed: true
 - id: 719
   step: 11144
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Overview of NLTK

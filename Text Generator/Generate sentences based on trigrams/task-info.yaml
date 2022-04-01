@@ -23999,6 +23999,13 @@ files:
         TextGeneratorTests().run_tests()
 
   learner_created: false
+- name: text_generator/corpus.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11144#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Fri, 01 Apr 2022 09:29:37 UTC
 record: -1
